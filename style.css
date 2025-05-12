@@ -1,41 +1,105 @@
+/* General Body Style */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background: #f4f4f9;
   margin: 0;
   padding: 0;
-  background: #f0f0f0;
   color: #333;
 }
 
+/* Header Style */
 header {
-  background: #333;
+  background: #4CAF50; /* Fresh green color */
   color: white;
-  padding: 1.5em;
   text-align: center;
+  padding: 2em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2em;
+  font-weight: 300;
+}
+
+/* Navigation Style */
 nav {
-  background: #555;
+  background: #333;
   padding: 1em;
   text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
+  font-size: 1.1em;
+  transition: all 0.3s ease;
 }
 
+nav a:hover {
+  color: #4CAF50; /* Hover effect with green color */
+  text-decoration: underline;
+}
+
+/* Main Content Style */
 main {
+  max-width: 900px;
+  margin: 3em auto;
   padding: 2em;
-  max-width: 800px;
-  margin: auto;
   background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+h2 {
+  font-size: 2em;
+  color: #4CAF50;
+  margin-bottom: 1em;
+}
+
+section {
+  margin-bottom: 2em;
+}
+
+section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+section ul li {
+  font-size: 1.1em;
+  margin-bottom: 0.8em;
+  line-height: 1.6em;
+}
+
+section ul li strong {
+  color: #4CAF50;
+}
+
+/* Footer Style */
 footer {
-  text-align: center;
-  padding: 1em;
   background: #333;
   color: white;
-  margin-top: 2em;
+  padding: 1.5em;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 0.9em;
 }
+
+/* Hover Effects for Links */
+a {
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #4CAF50;
+}
+
