@@ -75,13 +75,34 @@ main {
   margin: 20px;
 }
 
+/* Pop-Style Fact List */
 ul {
-  line-height: 1.8;
+  list-style: none;
+  padding-left: 0;
 }
 
 li {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin: 15px 0;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+li:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+li::before {
+  content: "🔹"; /* Simple icon for each list item */
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #3498db;
 }
 
 ul a {
@@ -91,6 +112,15 @@ ul a {
 
 ul a:hover {
   text-decoration: underline;
+}
+
+/* Fact Colorful Labels */
+li:nth-child(odd) {
+  background-color: #f0f8ff;
+}
+
+li:nth-child(even) {
+  background-color: #f7f7f7;
 }
 
 /* Footer Styles */
