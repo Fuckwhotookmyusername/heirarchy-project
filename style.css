@@ -1,66 +1,104 @@
-/* General Body Styles */
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #2e2e2e;
-  color: #ddd;
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  box-sizing: border-box;
 }
 
-/* Header Styles */
-header {
-  background-color: #1f1f1f;
-  color: #fff;
-  text-align: center;
-  padding: 30px 0;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-header h1 {
-  margin: 0;
-  font-size: 3rem;
-}
-
-header p {
-  font-size: 1.3rem;
-  margin-top: 10px;
-  font-style: italic;
-}
-
-/* Navigation Styles */
+/* Navigation Bar */
 nav {
   display: flex;
   justify-content: center;
-  background-color: #333;
-  padding: 10px 0;
+  gap: 30px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  padding: 15px 25px;
+  font-size: 1.1rem;
   text-transform: uppercase;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  background-color: #e91e63;
+  color: #ff4081;
 }
 
-/* Main Content Styles */
+/* Disable click on current Home link */
+.home-link {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+/* Hero Section */
+.hero-section {
+  background: #222;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Main Content */
 main {
-  padding: 20px 40px;
+  padding: 50px 20px;
+  text-align: center;
 }
 
-main h2 {
+h2 {
   font-size: 2.5rem;
-  color: #e91e63;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  color: #e0e0e0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Hero Image (Optional) */
+.hero-image {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Facts Section */
+h3 {
+  font-size: 2rem;
   margin-bottom: 20px;
 }
 
-/* Fact List Styles - Using Grid for a better layout */
 .fact-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -69,114 +107,70 @@ main h2 {
   padding: 0;
 }
 
-.fact-btn:hover {
-  background-color: rgba(255, 64, 129, 0.1); /* soft pink background */
-  color: #ff4081; /* pink text */
-  border-radius: 5px;
-  box-shadow: 0 0 5px #ff4081; /* subtle glow effect */
+.fact-item {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.fact-item:hover {
+  transform: scale(1.05);
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.fact-btn {
+  background: none;
+  border: none;
+  color: #ff4081;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
   transition: all 0.3s ease;
 }
 
-.fact-list li {
-  cursor: pointer;
-  margin-bottom: 15px;
-  padding: 15px;
-  background-color: #444;
-  border-left: 5px solid #e91e63;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.fact-list li:hover {
-  transform: scale(1.05);
-  background-color: #555;
+.fact-btn:hover {
+  background-color: rgba(255, 64, 129, 0.1);
+  color: #ff4081;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ff4081;
 }
 
 .fact-detail {
   display: none;
   margin-top: 10px;
-  background-color: #666;
+  background-color: #333;
   padding: 10px;
   border-radius: 5px;
-  border-left: 5px solid #e91e63;
   font-size: 1.1rem;
+  color: #e0e0e0;
 }
 
-/* Source Links */
-ul {
-  padding-left: 20px;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-ul li a {
-  color: #e91e63;
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  font-size: 1rem;
+  margin-top: 40px;
 }
 
-/* Adding some design images as background */
-body {
-  background-image: url('your-image-path.jpg'); /* Example for adding an image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* Adding some image icons for visual appeal (just an example) */
-nav a::before {
-  content: url('icon-link.png'); /* Replace with an actual image URL */
-  margin-right: 8px;
-}
-
-/* Prevent cursor change for Home link */
-.home-link {
-  cursor: default; /* Makes the cursor stay as normal, not a pointer */
-  pointer-events: none; /* Disables click behavior */
-}
-
-/* Media Queries for Responsiveness */
+/* Responsive Design */
 @media (max-width: 768px) {
-  body {
-    padding: 0;
-    font-size: 1rem;
-  }
-
-  header h1 {
+  .hero-title {
     font-size: 2.2rem;
   }
 
-  header p {
-    font-size: 1.1rem;
+  .fact-btn {
+    font-size: 1rem;
   }
 
-  nav a {
-    padding: 10px 20px;
-  }
-
-  .fact-list li {
-    padding: 12px;
-  }
-
-  main {
-    padding: 10px 20px;
+  .hero-image img {
+    max-height: 300px;
   }
 }
