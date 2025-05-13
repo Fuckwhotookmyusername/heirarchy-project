@@ -3,116 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Corporate Hierarchy</title>
+  <title>Corporations Hierarchy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Corporate Hierarchy</h1>
-    <p>How businesses and major corporations maintain control and power</p>
-  </header>
-
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="home-link">Home</a>
     <a href="government.html">Government</a>
     <a href="corporations.html">Corporations</a>
-    <a href="why.html">Why It Lasts</a>
     <a href="solutions.html">Solutions</a>
   </nav>
 
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 class="hero-title">Corporate Hierarchy: The Power of Big Business</h1>
+  </div>
+
+  <!-- Main Content -->
   <main>
-    <h2>🔍 Corporate Power Facts</h2>
+    <h2>The Influence of Large Corporations</h2>
+    <p class="intro">Corporations wield enormous power globally. Their organizational structures shape markets, influence politics, and affect economies. Let’s delve into this hierarchy.</p>
 
+    <!-- Bubble Facts -->
+    <h3>Corporation Facts</h3>
     <ul class="fact-list">
-      <li onclick="toggleFact(this)">
-        🔹 <strong>1.</strong> Most major corporations are top-down hierarchies.
+      <li class="fact-item">
+        <button class="fact-btn" onclick="toggleDetail(this)">CEOs dominate corporate decisions.</button>
         <div class="fact-detail">
-          CEOs and boards of directors make decisions while lower-level employees have little say in operations or strategy.
+          <p>CEOs of major corporations make strategic decisions, often shaping entire industries. Their influence extends beyond the company, impacting markets and employment worldwide.</p>
         </div>
       </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>2.</strong> Stockholders often have more say than workers.
+      <li class="fact-item">
+        <button class="fact-btn" onclick="toggleDetail(this)">Corporations have more power than nations.</button>
         <div class="fact-detail">
-          Public companies prioritize shareholder profit, often at the expense of employee well-being or fair wages.
+          <p>Some of the largest corporations, like Amazon and Apple, have more financial power than entire nations. This raises questions about the balance of power in global society.</p>
         </div>
       </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>3.</strong> Corporate lobbying shapes laws in their favor.
+      <li class="fact-item">
+        <button class="fact-btn" onclick="toggleDetail(this)">Corporations use hierarchical structures for efficiency.</button>
         <div class="fact-detail">
-          Many corporations spend millions lobbying Congress to gain tax breaks, avoid regulation, or eliminate competition.
+          <p>Corporations organize their operations into distinct departments, each with a clear leader. This structure allows them to scale operations and respond to market changes efficiently.</p>
         </div>
       </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>4.</strong> Monopoly and market consolidation reduce competition.
-        <div class="fact-detail">
-          Tech giants like Amazon, Meta, and Google acquire competitors, reducing market diversity and centralizing power.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>5.</strong> CEOs earn hundreds of times more than workers.
-        <div class="fact-detail">
-          In 2023, the average CEO made over 300 times more than the average employee in the same company.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>6.</strong> Workers often have no vote or voice.
-        <div class="fact-detail">
-          Unlike cooperatives, most corporations don’t allow employees to vote on leadership or policies.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>7.</strong> Corporate influence often outweighs community needs.
-        <div class="fact-detail">
-          Decisions like outsourcing or factory closures prioritize profits over the well-being of workers or local economies.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>8.</strong> Companies use branding to distract from hierarchy.
-        <div class="fact-detail">
-          Brands like Apple or Starbucks promote progressive values, even while operating under highly centralized power structures.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>9.</strong> Gig workers have few protections or rights.
-        <div class="fact-detail">
-          Uber, DoorDash, and other gig platforms avoid providing benefits by classifying workers as independent contractors.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>10.</strong> Corporate media can shape public opinion.
-        <div class="fact-detail">
-          A small number of conglomerates own most media outlets, influencing what information is shared and how it's framed.
-        </div>
-      </li>
-    </ul>
-
-    <h3>📚 Sources</h3>
-    <ul>
-      <li><a href="https://www.epi.org/publication/ceo-pay-in-2023/" target="_blank">Economic Policy Institute – CEO Pay Report</a></li>
-      <li><a href="https://www.opensecrets.org" target="_blank">OpenSecrets – Corporate Lobbying Data</a></li>
-      <li><a href="https://hbr.org" target="_blank">Harvard Business Review – Corporate Structure Studies</a></li>
     </ul>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Hierarchy Project. Built by [Logan Singler].</p>
+    <p>© 2025 Corporate Hierarchy Project | Big Business Explained</p>
   </footer>
 
+  <!-- JS: Toggle Summary Visibility -->
   <script>
-    function toggleFact(element) {
-      const detail = element.querySelector('.fact-detail');
-      detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+    function toggleDetail(button) {
+      const detail = button.nextElementSibling;
+      const isVisible = detail.style.display === 'block';
+      detail.style.display = isVisible ? 'none' : 'block';
     }
   </script>
+
 </body>
 </html>
