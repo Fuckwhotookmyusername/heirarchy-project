@@ -69,6 +69,14 @@ main h2 {
   padding: 0;
 }
 
+.fact-btn:hover {
+  background-color: rgba(255, 64, 129, 0.1); /* soft pink background */
+  color: #ff4081; /* pink text */
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ff4081; /* subtle glow effect */
+  transition: all 0.3s ease;
+}
+
 .fact-list li {
   cursor: pointer;
   margin-bottom: 15px;
