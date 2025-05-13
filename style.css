@@ -139,6 +139,12 @@ nav a::before {
   margin-right: 8px;
 }
 
+/* Prevent cursor change for Home link */
+.home-link {
+  cursor: default; /* Makes the cursor stay as normal, not a pointer */
+  pointer-events: none; /* Disables click behavior */
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   body {
