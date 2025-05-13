@@ -61,5 +61,12 @@
     <p>© 2025 Corporate Hierarchy Project | Designed with care and curiosity</p>
   </footer>
 
+  <script>
+    function toggleDetail(button) {
+      const detail = button.nextElementSibling;
+      const isVisible = detail.style.display === 'block';
+      detail.style.display = isVisible ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
