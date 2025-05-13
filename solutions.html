@@ -3,116 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solutions to Hierarchy</title>
+  <title>Solutions to Power Imbalances</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Solutions to Hierarchy</h1>
-    <p>What can be done to break down the existing power structures?</p>
-  </header>
-
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html">Home</a>
+    <a href="index.html" class="home-link">Home</a>
     <a href="government.html">Government</a>
     <a href="corporations.html">Corporations</a>
-    <a href="why.html">Why It Lasts</a>
     <a href="solutions.html">Solutions</a>
   </nav>
 
+  <!-- Hero Section -->
+  <div class="hero-section">
+    <h1 class="hero-title">Potential Solutions to Hierarchical Imbalances</h1>
+  </div>
+
+  <!-- Main Content -->
   <main>
-    <h2>🔍 Possible Solutions to Hierarchies</h2>
+    <h2>Possible Ways to Address Power Inequality</h2>
+    <p class="intro">It’s essential to explore ways to address the imbalance of power in government, business, and society. From reforming policies to innovative solutions, change is possible.</p>
 
+    <!-- Bubble Facts -->
+    <h3>Solutions Facts</h3>
     <ul class="fact-list">
-      <li onclick="toggleFact(this)">
-        🔹 <strong>1.</strong> Encourage corporate transparency.
+      <li class="fact-item">
+        <button class="fact-btn" onclick="toggleDetail(this)">Promote equitable wealth distribution.</button>
         <div class="fact-detail">
-          By requiring companies to disclose more about their practices, wages, and environmental impact, we can hold them accountable.
+          <p>One solution to wealth inequality is the redistribution of resources through progressive taxation and social programs. This would ensure fairer access to opportunities for all citizens.</p>
         </div>
       </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>2.</strong> Implement stronger labor protections.
+      <li class="fact-item">
+        <button class="fact-btn" onclick="toggleDetail(this)">Enhance corporate transparency.</button>
         <div class="fact-detail">
-          Expanding workers' rights to organize, gain healthcare, and share in company profits can reduce the imbalance of power in the workplace.
+          <p>Implementing stronger regulations that force corporations to disclose financial and decision-making processes would increase accountability and reduce unethical practices.</p>
         </div>
       </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>3.</strong> Pursue public financing of campaigns.
+      <li class="fact-item">
+        <button class="fact-btn" onclick="toggleDetail(this)">Strengthen democratic participation.</button>
         <div class="fact-detail">
-          To reduce corporate influence in politics, we could offer candidates public funding for their campaigns, reducing dependence on wealthy donors.
+          <p>Encouraging more citizen involvement in government through voting, petitions, and grassroots movements can reduce the control of powerful elites and create a more participatory society.</p>
         </div>
       </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>4.</strong> Strengthen antitrust laws.
-        <div class="fact-detail">
-          Preventing monopolies and encouraging competition can reduce corporate power by breaking up large corporations into smaller, more competitive entities.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>5.</strong> Expand universal basic income (UBI).
-        <div class="fact-detail">
-          A UBI would give everyone a financial safety net, enabling individuals to have more autonomy and reduce dependence on powerful employers.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>6.</strong> Embrace cooperative business models.
-        <div class="fact-detail">
-          Worker-owned cooperatives can replace traditional corporate models by giving workers a say in how businesses are run and how profits are distributed.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>7.</strong> Encourage community-driven governance.
-        <div class="fact-detail">
-          Localizing decision-making and giving communities more power can reduce the concentration of authority in the hands of a few.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>8.</strong> Promote education on social justice and equity.
-        <div class="fact-detail">
-          Teaching young people about social inequality, economic systems, and power dynamics can create a more aware and active citizenry that demands change.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>9.</strong> Promote sustainability over profit.
-        <div class="fact-detail">
-          Shifting the focus of businesses from profit-maximization to sustainability and ethical practices can lead to fairer, more equitable systems.
-        </div>
-      </li>
-
-      <li onclick="toggleFact(this)">
-        🔹 <strong>10.</strong> Increase voting power for marginalized communities.
-        <div class="fact-detail">
-          Expanding access to voting and ensuring fair representation for marginalized groups can create a more democratic system where power is not centralized.
-        </div>
-      </li>
-    </ul>
-
-    <h3>📚 Sources</h3>
-    <ul>
-      <li><a href="https://www.brookings.edu" target="_blank">Brookings Institution – Policy Solutions</a></li>
-      <li><a href="https://www.demos.org" target="_blank">Demos – Economic Justice Resources</a></li>
-      <li><a href="https://www.huffpost.com" target="_blank">HuffPost – UBI and Economic Solutions</a></li>
     </ul>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>© 2025 Hierarchy Project. Built by [Logan Singler].</p>
+    <p>© 2025 Corporate Hierarchy Project | Ideas for Change</p>
   </footer>
 
+  <!-- JS: Toggle Summary Visibility -->
   <script>
-    function toggleFact(element) {
-      const detail = element.querySelector('.fact-detail');
-      detail.style.display = detail.style.display === 'block' ? 'none' : 'block';
+    function toggleDetail(button) {
+      const detail = button.nextElementSibling;
+      const isVisible = detail.style.display === 'block';
+      detail.style.display = isVisible ? 'none' : 'block';
     }
   </script>
+
 </body>
 </html>
