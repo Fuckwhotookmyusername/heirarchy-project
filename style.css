@@ -1,8 +1,8 @@
 /* General Body Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #2e2e2e;
+  color: #ddd;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -10,20 +10,22 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #1e90ff;
+  background-color: #1f1f1f;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
+  padding: 30px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 header p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-top: 10px;
+  font-style: italic;
 }
 
 /* Navigation Styles */
@@ -31,6 +33,7 @@ nav {
   display: flex;
   justify-content: center;
   background-color: #333;
+  padding: 10px 0;
 }
 
 nav a {
@@ -43,7 +46,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: #1e90ff;
+  background-color: #e91e63;
 }
 
 /* Main Content Styles */
@@ -52,19 +55,16 @@ main {
 }
 
 main h2 {
-  font-size: 2rem;
-  color: #1e90ff;
+  font-size: 2.5rem;
+  color: #e91e63;
   margin-bottom: 20px;
 }
 
-h3 {
-  font-size: 1.5rem;
-  margin-top: 30px;
-  color: #333;
-}
-
-/* Fact List Styles */
+/* Fact List Styles - Using Grid for a better layout */
 .fact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
   list-style: none;
   padding: 0;
 }
@@ -73,27 +73,26 @@ h3 {
   cursor: pointer;
   margin-bottom: 15px;
   padding: 15px;
-  background-color: #fff;
-  border-left: 5px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #444;
+  border-left: 5px solid #e91e63;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .fact-list li:hover {
   transform: scale(1.05);
-  background-color: #f0f8ff;
-  border-left: 5px solid #1e90ff;
+  background-color: #555;
 }
 
 .fact-detail {
   display: none;
   margin-top: 10px;
-  background-color: #eaf2f8;
+  background-color: #666;
   padding: 10px;
   border-radius: 5px;
-  border-left: 5px solid #1e90ff;
-  font-size: 1rem;
+  border-left: 5px solid #e91e63;
+  font-size: 1.1rem;
 }
 
 /* Source Links */
@@ -106,7 +105,7 @@ ul li {
 }
 
 ul li a {
-  color: #1e90ff;
+  color: #e91e63;
   text-decoration: none;
   font-size: 1.1rem;
 }
@@ -115,7 +114,7 @@ ul li a:hover {
   text-decoration: underline;
 }
 
-/* Footer Styles */
+/* Footer Styling */
 footer {
   background-color: #333;
   color: white;
@@ -126,6 +125,20 @@ footer {
   bottom: 0;
 }
 
+/* Adding some design images as background */
+body {
+  background-image: url('your-image-path.jpg'); /* Example for adding an image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Adding some image icons for visual appeal (just an example) */
+nav a::before {
+  content: url('icon-link.png'); /* Replace with an actual image URL */
+  margin-right: 8px;
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   body {
@@ -134,11 +147,11 @@ footer {
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   header p {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   nav a {
